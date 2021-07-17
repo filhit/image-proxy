@@ -99,7 +99,7 @@ const authorize = async (req, res, next) => {
    * ========================================================
    */
   const { access_token } = req.query;
-  if (access_token && access_token === "MY_SECRET_ACCESS_TOKEN") {
+  if (access_token && access_token === process.env.SECRET) {
     isAuthorized = true;
   } else {
     isAuthorized = false;
