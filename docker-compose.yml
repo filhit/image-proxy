@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  imageproxy:
+    build: .
+    container_name: imageproxy
+    ports:
+      - 4002:4001
+    restart: unless-stopped
+
